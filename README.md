@@ -20,7 +20,7 @@ Supports Debian and OpenBSD by default, though you'll need to get the
 `pxeboot` and `bsd.rd` files for `amd64` and `i386` yourself.
 
 Other operating systems should be easy to add, just follow the format of the
-`*.menu` files
+`.menu` files and add a new entry in `menu.cfg`
 
 ## EFI
 Hypothetically, efi support is included, but I haven't gotten it to actually
