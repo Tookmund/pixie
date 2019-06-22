@@ -1,2 +1,2 @@
 PATH efi32
-INCLUDE menu.cfg
+INCLUDE ::/menu.cfg
