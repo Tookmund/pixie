@@ -1,0 +1,9 @@
+LABEL install64
+	MENU LABEL Install OpenBSD amd64
+	KERNEL pxechn.c32
+	APPEND ::/openbsd/6.5/amd64/pxeboot
+
+LABEL install32
+	MENU LABEL Install OpenBSD i386
+	KERNEL pxechn.c32
+	APPEND ::/openbsd/6.5/i386/pxeboot

@@ -1,0 +1,9 @@
+LABEL install64
+	MENU LABEL Install Debian amd64
+	KERNEL ::/debian/9/amd64/linux
+	APPEND vga=788 initrd=::/debian/9/amd64/initrd.gz
+
+LABEL install32
+	MENU LABEL Install Debian i386
+	KERNEL ::/debian/9/i386/linux
+	APPEND vga=788 initrd=::/debian/9/i386/initrd.gz
