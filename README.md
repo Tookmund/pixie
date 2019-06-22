@@ -9,8 +9,10 @@ syslinux-efi
 pxelinux
 ```
 
-Clone this repository to `/srv/tftp/`, copy `dnsmasq.conf` to `/etc/dnsmasq.conf`
-and restart `dnsmasq`
+1. Clone this repository to `/srv/tftp/`
+2. Run `setup.sh` in `/srv/tftp/`
+3. Copy `dnsmasq.conf` to `/etc/dnsmasq.conf`
+4. Restart `dnsmasq`
 
 Runs in proxy mode, so you don't even have to have control over your dhcp server
 
