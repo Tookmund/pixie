@@ -26,3 +26,7 @@ Other operating systems should be easy to add, just follow the format of the
 Hypothetically, efi support is included, but I haven't gotten it to actually
 work yet. Pull requests welcome!
 
+
+## Acknowledgements
+Heavily based on https://help.ubuntu.com/community/PXEInstallMultiDistro
+and https://wiki.syslinux.org/wiki/index.php?title=PXELINUX-Multi-Arch
