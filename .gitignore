@@ -1,2 +1,4 @@
 bsd.rd
 pxeboot
+vmlinuz
+initrd.img
