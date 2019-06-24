@@ -25,9 +25,16 @@ Other operating systems should be easy to add, just follow the format of the
 `.menu` files and add a new entry in `menu.cfg`
 
 ## EFI
-Hypothetically, efi support is included, but I haven't gotten it to actually
-work yet. Pull requests welcome!
+EFI support works, but probably requires a version of syslinux >>= 6.04 to
+work around redzone bug solved by
+[this patch](https://www.syslinux.org/archives/2016-October/025395.html)
 
+```
+x86_64 EFI requires that all sources are compiled without red zone,
+which is not supported by the Windows ABI.
+
+Without this, syslinux crashes on some UEFI implementations.
+```
 
 ## Acknowledgements
 Heavily based on https://help.ubuntu.com/community/PXEInstallMultiDistro
