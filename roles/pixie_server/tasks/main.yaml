@@ -1,3 +1,8 @@
+- name: Print IP address
+  ansible.builtin.debug:
+    var: ansible_default_ipv4.address
+    verbosity: 2
+
 - name: Install Pre-Reqs
   apt:
     name:
@@ -22,17 +27,17 @@
     cd /srv/tftp
     ./setup.sh
 
-
 - name: Install dnsmasq config
   copy:
     src: /srv/tftp/dnsmasq.conf
+    remote_src: true
     dest: /etc/dnsmasq.conf
 
 - name: Update dnsmasq.conf with IP
   replace:
     path: /etc/dnsmasq.conf
-    regexp: '^X.X.X.X$'
-    replace: ansible_default_ipv4.address
+    regexp: 'X.X.X.X'
+    replace: "{{ ansible_default_ipv4.address }}"
 
 - name: Restart dnsmasq
   systemd_service:
