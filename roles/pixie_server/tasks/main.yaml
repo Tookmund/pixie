@@ -11,6 +11,10 @@
 
 - name: Clone Repo
   shell: |
+    if [ -d /srv/tftp ]
+    then
+      rm -rvf /srv/tftp
+    fi
     git clone https://codeberg.org/tookmund/pixie /srv/tftp
 
 - name: Run Setup
