@@ -1,0 +1,4 @@
+- name: Setup pixie server
+  hosts: pixie
+  roles:
+    - pixie_server
