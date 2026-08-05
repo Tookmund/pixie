@@ -1,0 +1,4 @@
+LABEL install1137
+	MENU LABEL Install Talos 1.13.7 metal amd64
+	KERNEL ::/talos/metal/amd64/613e1592b2da41ae5e265e8789429f22e121aab91cb4deb6bc3c0b6262961245/1.13.7/vmlinuz-amd64
+	APPEND talos.platform=metal slab_nomerge pti=on initrd=::/talos/metal/amd64/613e1592b2da41ae5e265e8789429f22e121aab91cb4deb6bc3c0b6262961245/1.13.7/initramfs-amd64.xz
