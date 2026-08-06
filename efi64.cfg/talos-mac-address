@@ -1,0 +1,9 @@
+PATH efi64
+UI vesamenu.c32
+TIMEOUT 600
+ONTIMEOUT install1137
+PROMPT 0
+MENU INCLUDE ::/pxe.cfg
+NOESCAPE 1
+
+MENU INCLUDE ::/talos/Talos.menu
