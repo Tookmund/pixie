@@ -1,19 +1,29 @@
-LABEL install64
-	MENU LABEL Install OpenBSD amd64
+LABEL install8064
+	MENU LABEL Install OpenBSD 8.0 amd64
+	KERNEL pxechn.c32
+	APPEND ::/openbsd/8.0/amd64/pxeboot
+
+LABEL install8064floppy
+	MENU LABEL Install OpenBSD 8.0 amd64 floppy
+	KERNEL ::/memdisk
+	APPEND initrd=::/openbsd/8.0/amd64/floppy80.img
+
+LABEL install6664
+	MENU LABEL Install OpenBSD 6.6 amd64
 	KERNEL pxechn.c32
 	APPEND ::/openbsd/6.6/amd64/pxeboot
 
-LABEL install64floppy
-	MENU LABEL Install OpenBSD amd64 floppy
+LABEL install6664floppy
+	MENU LABEL Install OpenBSD 6.6 amd64 floppy
 	KERNEL ::/memdisk
 	APPEND initrd=::/openbsd/6.6/amd64/floppy66.fs
 
-LABEL install32
-	MENU LABEL Install OpenBSD i386
+LABEL install6632
+	MENU LABEL Install OpenBSD 6.6 i386
 	KERNEL pxechn.c32
 	APPEND ::/openbsd/6.6/i386/pxeboot
 
-LABEL install32floppy
-	MENU LABEL Install OpenBSD i386 floppy
+LABEL install6632floppy
+	MENU LABEL Install OpenBSD 6.6 i386 floppy
 	KERNEL ::/memdisk
 	APPEND initrd=::/openbsd/6.6/i386/floppy66.fs
