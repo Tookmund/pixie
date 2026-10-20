@@ -1,0 +1,4 @@
+LABEL install64
+	MENU LABEL Install NetBSD amd64
+	KERNEL ::/netbsd/11.0/amd64/pxeboot_ia32.bin
+
